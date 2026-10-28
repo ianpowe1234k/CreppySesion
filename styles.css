@@ -1,0 +1,318 @@
+/* ======================================================================
+   ESTILOS CORPORATIVOS - EXPEDIENTES CREEPYPASTA (TEMA OSCURO TÉTRICO)
+   ====================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    overflow-y: auto;
+    background-color: #0b0c10; /* Fondo negro carbón profundo */
+    color: #e2e8f0;
+}
+
+/* Contenedor general que divide la pantalla en dos columnas */
+.portal-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Izquierda más amplia, derecha simétrica */
+    min-height: 100vh;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .portal-container {
+        grid-template-columns: 1fr; /* En celulares se vuelve una sola columna */
+    }
+    .portal-brand-side {
+        padding: 3rem 1.5rem !important;
+        min-height: 280px;
+    }
+}
+
+/* --------------------------------------------------------------------
+   PANEL IZQUIERDO: FONDO OSCURO CON DEGRADADO Y AMBIENTE TÉTRICO
+   -------------------------------------------------------------------- */
+.portal-brand-side {
+    /* Degradado negro y rojo/púrpura oscuro sobre ambiente misterioso */
+    background: linear-gradient(135deg, rgba(7, 8, 12, 0.92), rgba(26, 11, 28, 0.88)), 
+                url('https://i.redd.it/ntq0n5ids66h1.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    color: white;
+    border-right: 1px solid #1f293d;
+}
+
+.brand-content {
+    max-width: 450px;
+}
+
+/* Insignia superior en tonos rojos sangre / alerta */
+.brand-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(153, 27, 27, 0.25);
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fca5a5;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(4px);
+}
+
+.badge-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #dc2626;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #dc2626;
+}
+
+.brand-logo-large {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1rem;
+}
+
+.brand-logo-large .logo-icon {
+    font-size: 2rem;
+    color: #dc2626; /* Acento rojo sangre */
+}
+
+.brand-logo-large h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #f8fafc;
+}
+
+.brand-logo-large h1 span {
+    color: #dc2626; /* Rojo brillante */
+}
+
+.brand-tagline {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.95;
+    color: #94a3b8;
+}
+
+/* Tarjetas de características con estilo cristal oscuro */
+.brand-features {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: rgba(18, 20, 29, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 14px 18px;
+    border-radius: 10px;
+    backdrop-filter: blur(6px);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-2px);
+    border-color: rgba(239, 68, 68, 0.4);
+}
+
+.feature-icon {
+    font-size: 1.3rem;
+    background: rgba(220, 38, 38, 0.2);
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-item h4 {
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.feature-item p {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+
+/* --------------------------------------------------------------------
+   PANEL DERECHO: FORMULARIO Y TARJETA OSCURA
+   -------------------------------------------------------------------- */
+.portal-form-side {
+    background-color: #0b0c10; /* Fondo oscuro profundo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.login-card {
+    background-color: #12141d;
+    color: #e2e8f0;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+    width: 100%;
+    max-width: 480px;
+    border-top: 4px solid #dc2626; /* Toque rojo sangre institucional */
+    border: 1px solid #1f293d;
+}
+
+/* Encabezado del formulario */
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-header h2 {
+    color: #f8fafc;
+    font-size: 1.6rem;
+    margin-bottom: 0.4rem;
+}
+
+.login-header p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* Grupos de campos */
+.input-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Inputs oscuros y modernos */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #2d3748;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #0b0c10;
+    color: #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+input:focus, 
+select:focus, 
+textarea:focus {
+    border-color: #dc2626;
+    outline: none;
+    background-color: #12141d;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2);
+}
+
+/* Estilos para Checkboxes y Radio Buttons */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 0.5rem;
+}
+
+input[type="checkbox"], 
+input[type="radio"] {
+    width: auto;
+    cursor: pointer;
+}
+
+/* Enlace de ayuda */
+.form-actions-help {
+    text-align: right;
+    margin-bottom: 1.5rem;
+}
+
+.forgot-link {
+    color: #fca5a5;
+    font-size: 0.85rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* Botón de envío principal (Rojo sangre) */
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #dc2626;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 0.5rem;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+}
+
+.btn-submit:hover {
+    background-color: #991b1b;
+}
+
+/* Pie de tarjeta */
+.login-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #1f293d;
+}
+
+.login-footer p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.login-footer a {
+    color: #fca5a5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}

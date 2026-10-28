@@ -1,0 +1,126 @@
+<!--
+  ======================================================================
+  INSTITUCIÓN: CBTis 166 Pablo Torres Burgos
+  ----------------------------------------------------------------------
+  * Estudiante: Lopez Reyes Ian Uriel
+  * Grupo: 3B PRO VESP  
+  * Actividad: Formulario de Sesión / Login - Expediente Creepypasta
+  ====================================================================== -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso al Expediente - Enciclopedia de Creepypastas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Contenedor principal que divide la pantalla en dos mitades -->
+    <div class="portal-container">
+
+        <!-- LADO IZQUIERDO: Panel de Marca Estilo Archivo Clasificado / Misterio -->
+        <div class="portal-brand-side">
+            <div class="brand-content">
+                
+                <!-- Insignia superior -->
+                <div class="brand-badge">
+                    <span class="badge-dot"></span> Archivos Clasificados de la Web
+                </div>
+
+                <div class="brand-logo-large">
+                    <span class="logo-icon">👁️</span>
+                    <h1>Expedientes <span>Creepypasta</span></h1>
+                </div>
+                
+                <p class="brand-tagline">
+                    Inicie sesión en el sistema de vigilancia y monitoreo de entidades urbanas. Acceda a bitácoras de investigación y registros prohibidos de la red.
+                </p>
+
+                <!-- Tarjetas pequeñas de características -->
+                <div class="brand-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">🔒</div>
+                        <div>
+                            <h4>Acceso Restringido Nivel 5</h4>
+                            <p>Credenciales encriptadas bajo protocolos de seguridad.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <div>
+                            <h4>Monitoreo en Tiempo Real</h4>
+                            <p>Rastreo de anomalías y avistamientos activos en la red.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- LADO DERECHO: Tarjeta del Formulario de Inicio de Sesión -->
+        <div class="portal-form-side">
+            <div class="login-card">
+                
+                <div class="login-header">
+                    <h2>Acceso al Sistema</h2>
+                    <p>Introduce tus credenciales de investigador</p>
+                </div>
+
+                <!-- Formulario de Inicio de Sesión -->
+                <form id="form-login" action="/login-procesar" method="POST">
+                    
+                    <div class="input-group">
+                        <label for="email">Correo Electrónico de Investigador</label>
+                        <input type="email" id="email" name="email" placeholder="investigador@cbtis166.edu.mx" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Contraseña de Acceso</label>
+                        <input type="password" id="password" name="password" placeholder="••••••••" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="colorFavorito">Color de Alerta de la Entidad:</label>
+                        <input type="color" id="colorFavorito" name="colorFavorito" value="#dc2626">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="genero">Clasificación de Testigo:</label>
+                        <select id="genero" name="genero">
+                            <!-- Grupo de opciones -->
+                            <optgroup label="Clasificación">
+                                <option value="investigador">Investigador Paranormal</option>
+                                <option value="superviviente">Superviviente de Encuentro</option>
+                                <option value="observador">Observador Anónimo</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="in-number">Número de Expediente / Celda:</label>
+                        <input type="number" id="in-number" name="expediente" min="1" max="99" value="13">
+                    </div>
+
+                    <div class="form-actions-help">
+                        <a href="recuperar.html" class="forgot-link">¿Olvidó su clave de acceso?</a>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Iniciar Sesión en el Sistema</button>
+
+                </form>
+
+                <!-- Pie de tarjeta con opción de registro -->
+                <div class="login-footer">
+                    <p>¿No estás registrado en la red? <a href="registro.html">Solicitar acceso</a></p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
